@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['user_id'] = $row['ID'];
         header("Location: notes.php");
+        exit();
     } else {
         echo "Invalid username or password";
     }

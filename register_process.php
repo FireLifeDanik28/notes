@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
     if (mysqli_query($conn, $sql)) {
-        header("Location: index.php");
+        header("Location: index.html");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
